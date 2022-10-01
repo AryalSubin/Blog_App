@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
+import Register from "./Pages/Register";
 import CreatePost from "./Pages/CreatePost";
 import "./App.css";
 import { useState } from "react";
@@ -28,7 +29,7 @@ function App() {
           <button onClick={signUserOut}>Sign Out</button>
         )}
       </nav>
-
+      <Register/>
       <Routes>
         <Route path="/" element={<Home isAuth={isAuth} />} />
         <Route path="/createpost" element={<CreatePost isAuth={isAuth} />} />
